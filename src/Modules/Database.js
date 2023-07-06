@@ -47,7 +47,10 @@ async function CreateUser(id){
             TODO:
             應該還記得怎樣 INSERT 資料進去吧 🥺
             */
-            let sql = `--Please insert query here`;
+            let sql = `
+            INSERT INTO Players (id, money, role)
+            VALUES ("123", ""456, "789");
+            `;
             console.log(sql);
             db.exec(sql, (error) => {
                 db.close();
@@ -72,13 +75,18 @@ async function GetUser(id, All){
 
             小朋友才做選擇，我全部都要
             */
-            sql = `--AAAAAA`;
+            sql = `
+            SELECT * FROM Players 
+            `;
         } else {
             /*
             TODO:
             欸欸怎樣才能找到一個某特定的記錄 (wait WHERE am I...🤔)
             */
-            sql = `--WHERES THE LAMB SAUCE`;
+            sql = `
+            SELECT * FROM Players
+            WHERE ;
+            `;
         }
         db.all(sql, (error, results) => {
             db.close();
@@ -98,7 +106,11 @@ async function UpdateUser(id, money){
         TODO:
         怎樣才能 UPDATE 一個記錄 🤔
         */
-        let sql = `--Oh look, angry birds update`;
+        let sql = `
+        UPDATE
+        SET 
+        WHERE ;
+        `;
         db.exec(sql, (error) => {
             db.close();
             if (error){
@@ -117,7 +129,10 @@ async function RemoveUser(id, TargetId){
         /*
         刪除資料應該沒有直接刪掉 SavedData.db 快吧
         */
-        let sql = `--Error 404`;
+        let sql = `
+        DELETE FROM Players
+        WHERE;
+        `;
         db.exec(sql, (error) => {
             db.close();
             if (error){
